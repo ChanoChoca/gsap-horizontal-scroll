@@ -73,8 +73,8 @@ export default function Home() {
         "radial-gradient(at 20% -120vh, rgb(0,0,0) 0vh, rgba(0,0,0,0) 50vh)",
       scrollTrigger: {
         trigger: p,
-        start: "top bottom",
-        end: "bottom top",
+        start: "top bottom+=20%",
+        end: "bottom top-=40%",
         scrub: true,
       },
     });
@@ -288,6 +288,36 @@ export default function Home() {
         const t = progress <= 0.5 ? progress * 2 : 2 - progress * 2;
 
         backgroundEl.style.backgroundImage = createGradient(t);
+      },
+    });
+  }, []);
+
+  useEffect(() => {
+    const grids = document.querySelectorAll<HTMLElement>(
+      ".md\\:columns-2 > div"
+    );
+
+    if (grids.length < 2) return;
+
+    gsap.to(grids[0], {
+      y: () => grids[0].offsetHeight * 0.1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: grids[0],
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to(grids[1], {
+      y: () => grids[1].offsetHeight * 0.2,
+      ease: "none",
+      scrollTrigger: {
+        trigger: grids[1],
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
       },
     });
   }, []);
