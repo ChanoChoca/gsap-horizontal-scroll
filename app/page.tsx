@@ -300,7 +300,7 @@ export default function Home() {
     if (grids.length < 2) return;
 
     gsap.to(grids[0], {
-      y: () => grids[0].offsetHeight * 0.1,
+      y: () => grids[0].offsetHeight * 0.2,
       ease: "none",
       scrollTrigger: {
         trigger: grids[0],
@@ -311,7 +311,7 @@ export default function Home() {
     });
 
     gsap.to(grids[1], {
-      y: () => grids[1].offsetHeight * 0.2,
+      y: () => grids[1].offsetHeight * 0.4,
       ease: "none",
       scrollTrigger: {
         trigger: grids[1],
@@ -411,7 +411,7 @@ export default function Home() {
             Pase lo que pase, puedes contar conmigo.
           </q>
         </div>
-        <div className="md:columns-2">
+        <div className="md:columns-2 md:py-[20vh]">
           <div
             className="grid md:grid-cols-6 gap-4"
             style={{ gap: "calc(16px * 1.125)" }}
