@@ -301,7 +301,6 @@ export default function Home() {
 
     gsap.to(grids[0], {
       y: () => grids[0].offsetHeight * 0.2,
-      ease: "none",
       scrollTrigger: {
         trigger: grids[0],
         start: "top bottom",
@@ -312,7 +311,6 @@ export default function Home() {
 
     gsap.to(grids[1], {
       y: () => grids[1].offsetHeight * 0.4,
-      ease: "none",
       scrollTrigger: {
         trigger: grids[1],
         start: "top bottom",
@@ -411,9 +409,9 @@ export default function Home() {
             Pase lo que pase, puedes contar conmigo.
           </q>
         </div>
-        <div className="md:columns-2 md:py-[20vh]">
+        <div className="md:columns-2">
           <div
-            className="grid md:grid-cols-6 gap-4"
+            className="grid md:grid-cols-6 gap-4 pb-[40%]"
             style={{ gap: "calc(16px * 1.125)" }}
           >
             <div className="col-start-2 col-span-4 vertical-space">
@@ -424,7 +422,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="grid md:grid-cols-6 gap-4"
+            className="grid md:grid-cols-6 gap-4 pb-[60%]"
             style={{ gap: "calc(16px * 1.125)" }}
           >
             <div className="col-start-2 col-span-4 vertical-space">
