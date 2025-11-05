@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ReactLenis, { LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function LenisProvider({
   children,
 }: {
@@ -30,3 +32,4 @@ export default function LenisProvider({
     </>
   );
 }
+
